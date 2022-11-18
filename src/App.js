@@ -1,23 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import './index.scss';
+import './reset.scss';
+import Header from './components/Header';
+import Main from './components/Main';
+import Footer from './components/Footer';
+import Slider from './components/Slider';
+
+
+const firstImages = [
+  {
+    id: 1,
+    img: '/img/img1.png'
+  },
+  {
+    id: 2,
+    img: '/img/img2.png'
+  },
+];
+const secondImages = [
+  {
+    id: 3,
+    img: '/img/img3.png'
+  },
+  {
+    id: 4,
+    img: '/img/img4.png'
+  },
+];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header/>
+      <Main images={ firstImages }/>
+      <Slider/>
+        <Main images={ secondImages }/>
+      <Footer/>
     </div>
   );
 }

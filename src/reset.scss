@@ -1,0 +1,71 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'OrchideaPro', sans-serif;
+  color: #141414;
+  margin: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body, html {
+  overflow-x: hidden;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd,
+hr {
+  margin: 0;
+}
+
+a {
+  text-decoration: unset;
+  color: inherit;
+  appearance: none;
+  outline: none;
+}
+
+button,
+input,
+textarea {
+  outline: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  appearance: none;
+  font-family: inherit;
+
+  -webkit-appearance: button;
+}
+
+input, textarea {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+
+  & * {
+    pointer-events: none;
+  }
+}
